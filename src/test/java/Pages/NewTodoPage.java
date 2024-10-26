@@ -9,11 +9,25 @@ public class NewTodoPage extends BasePage{
     }
     By SubmitTodo=By.cssSelector("[data-testid=\"submit-newTask\"]");
     By TodoItem =By.cssSelector("[data-testid=\"new-todo\"]");
+    By TodoText=By.cssSelector("[data-testid=\"todo-text\"]");
 
+    By deleteBtn=By.cssSelector("[data-testid=\"delete\"]");
+    By deleteMsg=By.cssSelector("[data-testid=\"no-todos\"]");
 
-
-    public void AddTodo(String item){
+    public NewTodoPage AddTodo(String item){
         driver.findElement(TodoItem).sendKeys(item);
         driver.findElement(SubmitTodo).click();
+        return this;
+    }
+public String GetTodoText (){
+      return   driver.findElement(TodoText).getText();
+}
+    public NewTodoPage deleteTodoItem(){
+        driver.findElement(deleteBtn).click();
+        return this;
+    }
+    public Boolean GetDeletedTxt(){
+
+        return   driver.findElement(deleteMsg).isDisplayed();
     }
 }

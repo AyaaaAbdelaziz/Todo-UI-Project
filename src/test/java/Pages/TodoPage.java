@@ -11,8 +11,7 @@ public class TodoPage extends BasePage{
     }
     By AddTodoBtn =By.cssSelector("[data-testid=\"add\"]");
     By welcomeMsgTxt=By.cssSelector("[data-testid=\"welcome\"]");
-    By deleteBtn=By.cssSelector("[data-testid=\"delete\"]");
-    By deleteMsg=By.cssSelector("[data-testid=\"no-todos\"]");
+
 
     public Boolean CheckWelcomeTxt(){
       return driver.findElement(welcomeMsgTxt).isDisplayed();
@@ -23,10 +22,5 @@ public class TodoPage extends BasePage{
         driver.findElement(AddTodoBtn).click();
         return new NewTodoPage(driver);
     }
-    public void deleteTodoItem(){
-        driver.findElement(deleteBtn).click();
-    }
-    public void GetDeletedTxt(){
-         driver.findElement(deleteMsg).isDisplayed();
-    }
+
 }

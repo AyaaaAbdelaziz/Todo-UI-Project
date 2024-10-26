@@ -14,7 +14,10 @@ public class LoginPage extends BasePage {
     By ErrorMsg=By.cssSelector("[data-testid=\"error-alert\"]");
     By CreateNewAccountLink=By.cssSelector("[data-testid=\"signup\"]");
 
-
+public LoginPage load(){
+    driver.get("https://qacart-todo.herokuapp.com/");
+return this;
+}
 
     public TodoPage ValidLogin(String email, String password){
 

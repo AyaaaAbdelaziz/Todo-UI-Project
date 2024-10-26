@@ -26,7 +26,6 @@ String browser = System.getProperty("browser","FIREFOX");
         }
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        driver.get("https://qacart-todo.herokuapp.com/");
 
         return driver;
     }
