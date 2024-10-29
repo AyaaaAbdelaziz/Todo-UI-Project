@@ -1,9 +1,10 @@
 base\BaseTest.class
+Testcases\AddTodoTest.class
 Pages\CreatNewAccount.class
 Pages\TodoPage.class
-TodoTestcases\AddTodoTest.class
 Pages\shortlive.class
 factory\driverfactory.class
 Pages\LoginPage.class
 Pages\BasePage.class
 Pages\NewTodoPage.class
+Testcases\LoginTest.class
